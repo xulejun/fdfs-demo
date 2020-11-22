@@ -26,7 +26,7 @@ public class DownLoad {
             StorageClient1 storageClient1 = new StorageClient1(trackerServer,storageServer);
 
             // 从FastDFS服务器上下载文件
-            byte[] bytes = storageClient1.download_file1("group1/M00/00/00/wKgrN1-6IJuACEsDAAIpQEf1Wt0176.jpg");
+            byte[] bytes = storageClient1.download_file1("group1/M00/00/00/wKgrN1-6dZaATxTmAAIpQA1oU4o642.jpg");
             File file = new File("C:\\Users\\Administrator\\Desktop\\fastdfs.jpg");
             FileOutputStream fileOutputStream = new FileOutputStream(file);
             fileOutputStream.write(bytes);
