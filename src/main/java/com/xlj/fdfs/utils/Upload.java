@@ -34,7 +34,7 @@ public class Upload {
 
             // 执行上传
             String fileId = client.upload_file1("C:\\Users\\Administrator\\Desktop\\蓝底证件照.jpg", "jpg", metaList);
-//            group1/M00/00/00/wKgrN1-6IJuACEsDAAIpQEf1Wt0176.jpg
+            // group1/M00/00/00/wKgrN1-6IJuACEsDAAIpQEf1Wt0176.jpg
             System.out.println("upload success. file id is: " + fileId);
 
         } catch (Exception ex) {
