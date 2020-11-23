@@ -12,6 +12,10 @@ import org.csource.fastdfs.*;
  */
 public class Query {
     public static void main(String[] args) {
+        query();
+    }
+
+    private static void query() {
         try {
             ClientGlobal.initByProperties("application.properties");
             // 创建Tracker客户端和服务端

@@ -14,6 +14,10 @@ import org.csource.fastdfs.*;
  */
 public class Upload {
     public static void main(String[] args) {
+        upload();
+    }
+
+    private static void upload() {
         try {
             // 加载FastDFS的配置文件
             ClientGlobal.initByProperties("application.properties");
@@ -33,8 +37,9 @@ public class Upload {
             metaList[0] = new NameValuePair("fileName", "1.png");
 
             // 执行上传
-            String fileId = client.upload_file1("C:\\Users\\Administrator\\Desktop\\蓝底证件照.jpg", "jpg", metaList);
+            String fileId = client.upload_file1("C:\\Users\\Administrator\\Desktop\\JYJ.jpg", "jpg", metaList);
             // group1/M00/00/00/wKgrN1-6dZaATxTmAAIpQA1oU4o642.jpg
+            // group1/M00/00/00/wKgrN1-6fH2AM_L_AAO8jSbtuo0251.jpg
             System.out.println("upload success. file id is: " + fileId);
 
         } catch (Exception ex) {

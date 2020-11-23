@@ -13,6 +13,10 @@ import java.io.FileOutputStream;
  */
 public class DownLoad {
     public static void main(String[] args) {
+        downLoad();
+    }
+
+    private static void downLoad() {
         try {
             // 读取文件配置
             ClientGlobal.initByProperties("application.properties");
