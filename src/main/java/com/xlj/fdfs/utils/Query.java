@@ -27,12 +27,12 @@ public class Query {
             StorageClient1 storageClient = new StorageClient1(trackerServer, storageServer);
 
             // 执行查询
-            FileInfo fileInfo = storageClient.query_file_info("group1", "M00/00/00/wKgrN1-6IJuACEsDAAIpQEf1Wt0176.jpg");
-            FileInfo fileInfo1 = storageClient.query_file_info1("group1/M00/00/00/wKgrN1-6IJuACEsDAAIpQEf1Wt0176.jpg");
+            FileInfo fileInfo = storageClient.query_file_info("group1", "M00/00/00/wKgrN1-6fH2AM_L_AAO8jSbtuo0251.jpg");
+            FileInfo fileInfo1 = storageClient.query_file_info1("group1/M00/00/00/wKgrN1-6fH2AM_L_AAO8jSbtuo0251.jpg");
             System.out.println(fileInfo);
             System.out.println(fileInfo1);
             // 查询元信息
-            NameValuePair[] metadata1 = storageClient.get_metadata1("group1/M00/00/00/wKgrN1-6IJuACEsDAAIpQEf1Wt0176.jpg");
+            NameValuePair[] metadata1 = storageClient.get_metadata1("group1/M00/00/00/wKgrN1-6fH2AM_L_AAO8jSbtuo0251.jpg");
             System.out.println(metadata1[0].getName() + "=" + metadata1[0].getValue());
 
         } catch (Exception e) {
