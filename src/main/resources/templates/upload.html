@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>借款人信息</title>
+</head>
+<body>
+<form>
+    姓名：<span th:text="${borrower.name}"></span><br>
+    性别：<span th:text="${borrower.sex}"></span><br>
+    电话：<span th:text="${borrower.phone}"></span><br>
+    借款金额：<span th:text="${borrower.money}"></span><br>
+    文件：<input type="file" name="myFile">
+    <input type="hidden" name="id" th:value="${borrower.id}">
+    <input type="submit" value="上传文件">
+</form>
+</body>
+</html>

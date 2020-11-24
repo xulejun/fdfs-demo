@@ -16,26 +16,59 @@ import lombok.experimental.Accessors;
 @AllArgsConstructor
 @Accessors(chain = true)
 public class BorrowerPo {
+    /**
+     * 自增长序列
+     */
     private int id;
 
+    /**
+     * 借款人姓名
+     */
     private String name;
 
+    /**
+     * 性别
+     */
     private int sex;
 
+    /**
+     * 借款人电话
+     */
     private String phone;
 
+    /**
+     * 借款金额
+     */
     private double money;
 
+    /**
+     * 文件组名
+     */
     private String groupName;
 
+    /**
+     * 文件路径
+     */
     private String filePath;
 
+    /**
+     * 文件名
+     */
     private String fileName;
 
+    /**
+     * 文件大小
+     */
     private int fileSize;
 
+    /**
+     * 创建时间
+     */
     private String createTime;
 
+    /**
+     * 更新时间
+     */
     private String updateTime;
 
     public void forInsert(){

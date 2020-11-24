@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.xlj.fdfs.mapper.BorrowerMapper">
+
+    <sql id="tableName">borrower</sql>
+
+    <resultMap id="BaseResultMap" type="com.xlj.fdfs.po.BorrowerPo">
+        <id column="id" jdbcType="INTEGER" property="id"/>
+        <result column="name" jdbcType="VARCHAR" property="name"/>
+        <result column="sex" jdbcType="INTEGER" property="sex"/>
+        <result column="phone" jdbcType="VARCHAR" property="phone"/>
+        <result column="money" jdbcType="DECIMAL" property="money"/>
+        <result column="group_name" jdbcType="VARCHAR" property="groupName"/>
+        <result column="file_path" jdbcType="VARCHAR" property="filePath"/>
+        <result column="file_name" jdbcType="VARCHAR" property="fileName"/>
+        <result column="file_size" jdbcType="BIGINT" property="fileSize"/>
+        <result column="create_time" jdbcType="VARCHAR" property="createTime"/>
+        <result column="update_time" jdbcType="VARCHAR" property="updateTime"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id, name, sex, phone, money, group_name, file_path, file_name, file_size, create_time, update_time
+    </sql>
+
+    <select id="selectAll" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from
+        <include refid="tableName"/>
+    </select>
+    <select id="selectById" resultMap="BaseResultMap" parameterType="integer">
+        select
+        <include refid="Base_Column_List"/>
+        from
+        <include refid="tableName"/>
+        where id = #{id}
+    </select>
+</mapper>
