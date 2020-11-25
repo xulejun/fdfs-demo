@@ -1,4 +1,4 @@
-package com.xlj.fdfs.utils;
+package com.xlj.fdfs;
 
 import org.csource.common.NameValuePair;
 import org.csource.fastdfs.*;
@@ -10,7 +10,7 @@ import org.csource.fastdfs.*;
  * @author xlj
  * @date 2020/11/22 16:30
  */
-public class Query {
+public class QueryTest {
     public static void main(String[] args) {
         query();
     }

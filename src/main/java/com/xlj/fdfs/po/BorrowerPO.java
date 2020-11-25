@@ -15,7 +15,7 @@ import lombok.experimental.Accessors;
 @NoArgsConstructor
 @AllArgsConstructor
 @Accessors(chain = true)
-public class BorrowerPo {
+public class BorrowerPO {
     /**
      * 自增长序列
      */
@@ -71,7 +71,10 @@ public class BorrowerPo {
      */
     private String updateTime;
 
-    public void forInsert(){
+    public BorrowerPO forInsert(){
         this.createTime = this.updateTime = String.valueOf(System.currentTimeMillis());
+        return this;
     }
+
+
 }

@@ -1,4 +1,4 @@
-package com.xlj.fdfs.utils;
+package com.xlj.fdfs;
 
 import org.csource.common.NameValuePair;
 import org.csource.fastdfs.*;
@@ -12,7 +12,7 @@ import org.csource.fastdfs.*;
  * 在此文件通过FastDFS的Client代码访问tracker和storage
  * 通过client的api代码方便访问 tracker 和storage，socket协议
  */
-public class Upload {
+public class UploadTest {
     public static void main(String[] args) {
         upload();
     }

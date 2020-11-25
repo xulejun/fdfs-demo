@@ -1,6 +1,6 @@
 package com.xlj.fdfs.mapper;
 
-import com.xlj.fdfs.po.BorrowerPo;
+import com.xlj.fdfs.po.BorrowerPO;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 
@@ -16,7 +16,7 @@ public interface BorrowerMapper {
      * 查询所有的借款人信息
      * @return List<BorrowerPo>
      */
-    List<BorrowerPo> selectAll();
+    List<BorrowerPO> selectAll();
 
     /**
      * 根据id查询借款人信息
@@ -24,5 +24,11 @@ public interface BorrowerMapper {
      * @param id
      * @return BorrowerPo
      */
-    BorrowerPo selectById(@Param(value = "id") Integer id);
+    BorrowerPO selectById(@Param(value = "id") Integer id);
+
+    /**
+     * 更新借款人信息
+     * @param borrowerPO
+     */
+    void update(BorrowerPO borrowerPO);
 }

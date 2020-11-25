@@ -1,4 +1,4 @@
-package com.xlj.fdfs.utils;
+package com.xlj.fdfs;
 
 import org.csource.fastdfs.*;
 
@@ -11,7 +11,7 @@ import java.io.FileOutputStream;
  * @author xlj
  * @date 2020/11/22 16:51
  */
-public class DownLoad {
+public class DownLoadTest {
     public static void main(String[] args) {
         downLoad();
     }
