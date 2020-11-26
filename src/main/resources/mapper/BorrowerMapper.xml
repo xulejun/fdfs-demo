@@ -46,4 +46,5 @@
         set group_name = #{groupName}, file_path=#{filePath}, file_name=#{fileName}, file_size=#{fileSize},
         create_time=#{createTime}, update_time=#{updateTime} where id=#{id}
     </update>
+
 </mapper>

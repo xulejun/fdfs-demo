@@ -8,7 +8,6 @@ import java.util.List;
 
 /**
  * @author xlj
- * @date 2020/11/24 21:35
  */
 @Mapper
 public interface BorrowerMapper {

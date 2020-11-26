@@ -19,7 +19,7 @@ public class BorrowerPO {
     /**
      * 自增长序列
      */
-    private int id;
+    private Integer id;
 
     /**
      * 借款人姓名
@@ -29,7 +29,7 @@ public class BorrowerPO {
     /**
      * 性别
      */
-    private int sex;
+    private Integer sex;
 
     /**
      * 借款人电话
@@ -39,7 +39,7 @@ public class BorrowerPO {
     /**
      * 借款金额
      */
-    private double money;
+    private Double money;
 
     /**
      * 文件组名
@@ -59,7 +59,7 @@ public class BorrowerPO {
     /**
      * 文件大小
      */
-    private int fileSize;
+    private Integer fileSize;
 
     /**
      * 创建时间

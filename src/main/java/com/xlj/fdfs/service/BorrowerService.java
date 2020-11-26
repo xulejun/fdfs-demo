@@ -28,4 +28,10 @@ public interface BorrowerService {
      * @param borrowerPo
      */
     void update(BorrowerPO borrowerPo);
+
+    /**
+     * 根据id删除文件及信息
+     * @param id
+     */
+    void deleteById(Integer id);
 }

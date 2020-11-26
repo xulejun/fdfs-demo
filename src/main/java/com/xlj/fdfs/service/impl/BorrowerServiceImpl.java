@@ -3,6 +3,7 @@ package com.xlj.fdfs.service.impl;
 import com.xlj.fdfs.mapper.BorrowerMapper;
 import com.xlj.fdfs.po.BorrowerPO;
 import com.xlj.fdfs.service.BorrowerService;
+import com.xlj.fdfs.util.FastDfsUtil;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
@@ -29,6 +30,17 @@ public class BorrowerServiceImpl implements BorrowerService {
 
     @Override
     public void update(BorrowerPO borrowerPo) {
+        borrowerMapper.update(borrowerPo);
+    }
+
+    @Override
+    public void deleteById(Integer id) {
+        BorrowerPO borrowerPo = borrowerMapper.selectById(id);
+        FastDfsUtil.delete(borrowerPo.getGroupName(), borrowerPo.getFilePath());
+        borrowerPo.setGroupName("")
+                .setFilePath("")
+                .setFileSize(null)
+                .setFileName("");
         borrowerMapper.update(borrowerPo);
     }
 }

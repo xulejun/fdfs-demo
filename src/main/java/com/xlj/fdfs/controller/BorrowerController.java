@@ -17,6 +17,7 @@ import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.annotation.Resource;
+import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
 
@@ -116,4 +117,16 @@ public class BorrowerController {
         ResponseEntity responseEntity = new ResponseEntity<>(dataBytes, httpHeaders, HttpStatus.OK);
         return responseEntity;
     }
+
+    /**
+    * @description 文件删除
+    * @author xlj
+    * @date 2020/11/26 22:00
+    */
+    @RequestMapping("/delete/{id}")
+    public String delete(@PathVariable Integer id){
+        borrowerService.deleteById(id);
+        return "redirect:/";
+    }
+
 }

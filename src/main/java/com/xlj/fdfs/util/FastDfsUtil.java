@@ -2,9 +2,6 @@ package com.xlj.fdfs.util;
 
 import org.csource.fastdfs.*;
 
-import java.io.File;
-import java.io.FileOutputStream;
-
 /**
  * @author xlj
  * @date 2020/11/25 20:59
@@ -20,8 +17,6 @@ public class FastDfsUtil {
         try {
             // 加载FastDFS的配置文件
             ClientGlobal.initByProperties("application.properties");
-            System.out.println("network_timeout=" + ClientGlobal.g_network_timeout + "ms");
-            System.out.println("charset=" + ClientGlobal.g_charset);
 
             // 创建Tracker客户端和服务端
             TrackerClient tracker = new TrackerClient();
@@ -64,6 +59,31 @@ public class FastDfsUtil {
         } catch (Exception e) {
             e.printStackTrace();
             return null;
+        }
+    }
+
+    /**
+     * @description 文件删除
+     * @author xlj
+     * @date 2020/11/26 20:59
+     */
+    public static void delete(String group, String filePath) {
+        try {
+            // 读取文件配置
+            ClientGlobal.initByProperties("application.properties");
+
+            // 创建Tracker客户端和服务端
+            TrackerClient trackerClient = new TrackerClient();
+            TrackerServer trackerServer = trackerClient.getTrackerServer();
+
+            // 创建Storage客户端和服务端
+            StorageServer storageServer = null;
+            StorageClient1 storageClient1 = new StorageClient1(trackerServer, storageServer);
+
+            // 从FastDFS服务器上删除文件
+            storageClient1.delete_file(group, filePath);
+        } catch (Exception e) {
+            e.printStackTrace();
         }
     }
 }
