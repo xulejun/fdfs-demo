@@ -28,7 +28,7 @@ public interface BorrowerMapper {
 
     /**
      * 更新借款人信息
-     * @param borrowerPO
+     * @param borrowerPo
      */
-    void update(BorrowerPO borrowerPO);
+    void update(BorrowerPO borrowerPo);
 }

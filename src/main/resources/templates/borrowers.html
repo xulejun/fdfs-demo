@@ -24,7 +24,7 @@
                 <a th:href="@{|/upload/${borrower.id}|}">上传</a>
             </span>
             <span th:if="${borrower.filePath!=null && borrower.filePath!=''}">
-                <a th:href="@{|/download|}">下载</a>
+                <a th:href="@{|/download/${borrower.id}|}">下载</a>
                 <a th:href="@{|/delete|}">删除</a>
             </span>
         </td>

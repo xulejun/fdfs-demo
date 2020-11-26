@@ -28,7 +28,7 @@ public class BorrowerServiceImpl implements BorrowerService {
     }
 
     @Override
-    public void update(BorrowerPO borrowerPO) {
-        borrowerMapper.update(borrowerPO);
+    public void update(BorrowerPO borrowerPo) {
+        borrowerMapper.update(borrowerPo);
     }
 }
